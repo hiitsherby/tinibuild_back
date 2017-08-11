@@ -1,0 +1,280 @@
+
+.alignCenter{
+  text-align: center;
+}
+
+#home, #todo, #cal {
+  position: relative;
+  left: 250px;
+  width: 78%;
+}
+
+#calendar {
+  position: absolute;
+  left: 10%;
+}
+
+#todo-header {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+}
+
+#todo-container {
+  position: absolute;
+  top: 300%;
+  left: 32%;
+}
+
+@media (max-width: 767px) {
+  #home, #todo, #cal {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+
+  #calendar {
+    position: absolute;
+    left: 0;
+  }
+
+  #todo-header {
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+
+  #todo-container {
+    position: absolute;
+    top: 300%;
+    left: 0;
+  }
+
+  #todolist li{
+    position: relative;
+    /*border: solid 1px black;*/
+    width: 415px;
+  }
+}
+
+@media (max-width: 414px) {
+  #home, #todo, #cal {
+    position: relative;
+    left: 0;
+    width: 100%;
+  }
+
+  #calendar {
+    position: absolute;
+    left: 0;
+  }
+
+  #todo-header {
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+
+  #todo-container {
+    position: absolute;
+    top: 300%;
+    left: 0;
+  }
+
+  #todolist li{
+    position: relative;
+    /*border: solid 1px black;*/
+    width: 300px;
+  }
+
+  #innerlist ul li{
+    width: 280px;
+  }
+
+  .trash {
+    position: absolute;
+    right: 10px;
+  }
+}
+
+/*Login and register*/
+.bg-login, .bg-register {
+  background-color: black;
+}
+
+.login-header, .register-header {
+  
+  text-align: center;
+  color:white;
+}
+
+.login-header h2{
+  font-family: 'OCR A Std', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serifpx;
+  font-weight: lighter;
+  font-size:150%;
+  line-height: 200%;
+  margin-left: 50%
+}
+
+.register-header h2{
+  font-family: 'OCR A Std', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serifpx;
+  font-weight: lighter;
+  font-size:150%;
+  line-height: 200%;
+  margin-left: 0%
+}
+
+.direct-login, .direct-register {
+  text-align: center;
+}
+
+.square{
+  width:40%;
+  height:40%;
+  margin:20%;
+}
+.form-control{
+  background-color: black;
+  border-bottom: solid 1px grey !important;
+  border-top:none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  width:35%; 
+  height:50px;
+  margin-left:6%;
+  font-family: 'OCR A Std', 'Avenir Next', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.btn-success{
+  background-color: grey;
+  width:35%;
+  height:40px;
+  color:black;
+  font-family: 'OCR A Std', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-style:none;
+  border-radius:0;
+  margin-left: 6%;
+  margin-top:0.5%;
+}
+.btn-success:hover{
+  background-color: skyblue;
+}
+.direct-register a{
+    font-family: 'OCR A Std', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color:grey;
+    font-size:78%;
+    margin-right: 2%;
+    float:left;
+    line-height:150%;
+    text-decoration: none;
+    margin-top:1%;
+}
+.direct-login a{
+    font-family: 'OCR A Std', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color:grey !important;
+    font-size:78%;
+    margin-right: 2%;
+    float:left;
+    margin-left: 3%;
+    line-height:150%;
+    text-decoration: none;
+    margin-top:1%;
+
+}
+.direct-login a:hover{
+    font-family: 'OCR A Std', 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color:white !important;
+    font-size:78%;
+    margin-right: 2%;
+    float:left;
+    margin-left: 3%;
+    line-height:150%;
+    text-decoration: none;
+    margin-top:1%;
+
+}
+
+
+.control-label{
+  color:black;
+}
+html{
+  width:auto;
+  height:auto;
+}
+
+.form-horizontal{
+    margin-left:20%;
+}
+
+.fang{
+  margin-top: 12%
+}
+
+
+/*Todo List*/
+#todolist, #innerlist ul{
+  /*border: 1px solid red;*/
+  list-style: none;
+  padding-left:0;
+}
+
+#todolist {
+  width: 30%;
+}
+
+#todolist li {
+  position: relative;
+  left: -7%;
+  border: 1px solid #9b9b9b;
+  background-color: #9b9b9b;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#innerlist ul{
+  position: relative;
+  left: 5%;
+}
+
+.trash {
+  position: absolute;
+  right: 5px;
+}
+
+#todostar {
+  position: absolute;
+  right: 20px;
+}
+
+#showsub{
+  position: absolute;
+  right: 40px;
+}
+
+.completeTodo {
+  color: #b8babc;
+  text-decoration: line-through;
+}
+
+.trash, .star, #edit-btn, #add-btn, #showsub, #inner-edit-btn, #inner-add-btn, .fa-star-o, .fa-star {
+  cursor: pointer;
+
+}
+
+.fa-star{
+  color: #ffe900;
+}
+
+.trash{
+  color: #ff3535;
+}
+
+.star {
+  color: #f2ed00;
+}
+
+.disappear{
+  display: none;
+}

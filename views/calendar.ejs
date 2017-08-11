@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title><%= title %></title>
+  <link href='stylesheets/fullcalendar.min.css' rel='stylesheet' />
+  <link href='stylesheets/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <link rel='stylesheet' href='stylesheets/calendar.css'  />
+  <link rel="stylesheet" href="stylesheets/sb-admin-2.css" >
+  <link rel="stylesheet" href="stylesheets/main.css" >
+</head>
+<body>
+
+
+  <div id="wrapper">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">PS Admin</a>
+        </div>
+        <!-- /.navbar-header -->
+
+        <ul class="nav navbar-top-links navbar-right">
+
+
+            <!-- /.dropdown -->
+            <!-- <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="login.html" id="signout-btn"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+            </li> -->
+            <li class="dropdown">
+              <button type="button" id="addEvent">新增活動</button>
+            </li>
+            <li class="dropdown">
+              <a href="/login" id="signout-btn"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            </li>
+            <!-- /.dropdown -->
+        </ul>
+        <!-- /.navbar-top-links -->
+
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse">
+                <ul class="nav" id="side-menu">
+                  <li>
+                      <a href="/"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                  </li>
+
+                  <li>
+                      <a href="/calendar" class="active"><i class="fa fa-table fa-fw"></i> Calendar</a>
+                  </li>
+                  <li>
+                      <a href="/chat"><i class="fa fa-commenting fa-fw"></i> Chat</a>
+                  </li>
+                  <li>
+                      <a href="/ticket"><i class="fa fa-ticket fa-fw"></i> Support</a>
+                  </li>
+                </ul>
+            </div>
+            <!-- /.sidebar-collapse -->
+        </div>
+        <!-- /.navbar-static-side -->
+    </nav>
+  </div>
+
+  <div id="cal">
+	  <div id='calendar'></div>
+  </div>
+
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Add Event</h5>
+        </div>
+        <div class="modal-body">
+          <!-- 內容 -->
+          <!-- 內容 -->
+          <form>
+            <input type="text" placeholder="Event" required/><br /><br />
+            <input type="datetime-local" id="startDate" />
+            到
+            <input type="datetime-local" id="endDate" /><br /><br />
+            <input type="checkbox" id="allday" /><span class="alldaylabel">全天</span><br /><br />
+            <span class="des">說明</span>
+            <textarea>
+            </textarea>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src='javascripts/moment.min.js'></script>
+  <script src='javascripts/jquery.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src='javascripts/fullcalendar.min.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script src="javascripts/cal.js"></script>
+  <script src="javascripts/sb-admin-2.js"></script>
+</body>
+</html>
